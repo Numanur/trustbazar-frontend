@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { publicRequest } from "../utils/makeRequest";
 import ProductCard from "../components/ProductCard";
 import Loading from "../components/Loading";

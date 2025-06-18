@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { publicRequest } from "../utils/makeRequest";
 import { productColumns } from "../utils/TableSource";
 import { DataGrid } from "@mui/x-data-grid";
@@ -36,19 +36,22 @@ const ProductTable = () => {
     fetchProducts();
   }, []);
 
-    const handleSell = async (serialNumber, status) => {
-        if (status === 'sold') return '';
+  const handleSell = async (serialNumber, status) => {
+    if (status === "sold") return "";
 
-        try {
-            const res = await publicRequest.put(`/products/${serialNumber}`);
-            res.data.success && setProducts(prev => {
-                return prev.map(item => {
-                    return item.serialNumber === serialNumber ? { ...item, sellStatus: 'sold' } : item;
-                });
-            });
-        } catch (err) {
-            console.log(err);
-        }
+    try {
+      const res = await publicRequest.put(`/products/${serialNumber}`);
+      res.data.success &&
+        setProducts((prev) => {
+          return prev.map((item) => {
+            return item.serialNumber === serialNumber
+              ? { ...item, sellStatus: "sold" }
+              : item;
+          });
+        });
+    } catch (err) {
+      console.log(err);
+    }
   };
 
   // create action column

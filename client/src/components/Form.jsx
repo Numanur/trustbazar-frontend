@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import TextField from "@mui/material/TextField";
 
 const ProductForm = ({ newProduct, setNewProduct, type, name, label }) => {

@@ -1,4 +1,3 @@
-import React from "react";
 import Blockchain from "../assets/blockchain.png";
 
 const Home = () => {
