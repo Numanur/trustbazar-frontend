@@ -11,7 +11,7 @@ const UndoProducts = () => {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const res = await publicRequest.get("api/products/all");
+        const res = await publicRequest.get("/api/products/all");
         let productArr = [];
 
         res.data?.products?.length > 0 &&
