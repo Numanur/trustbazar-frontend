@@ -10,7 +10,7 @@ const Products = () => {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const res = await publicRequest.get("/api/products/all");
+        const res = await publicRequest.get("/products/all");
         setProducts(res.data.products);
       } catch (err) {
         console.log("products error: ", err);
