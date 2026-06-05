@@ -11,6 +11,8 @@ const Navbar = () => {
         <Link to="/products">
           <span className="text-lg cursor-pointer">Products</span>
         </Link>
+
+        <Link to="/verify-product">Verify Product</Link>
         <Link to="/products-table">
           <span className="text-lg cursor-pointer">Admin</span>
         </Link>

@@ -7,6 +7,7 @@ const Product = lazy(() => import("../pages/Product"));
 const ProductTable = lazy(() => import("../pages/ProductTable"));
 const NewProduct = lazy(() => import("../pages/NewProduct"));
 const UndoProducts = lazy(() => import("../pages/UndoProducts"));
+const VerifyProduct = lazy(() => import("../pages/VerifyProduct"));
 const Error = lazy(() => import("../pages/Error"));
 
 import Loading from "../components/Loading";
@@ -65,6 +66,10 @@ const Index = () => {
         {
           path: "/products-table",
           element: <ProductTable />,
+        },
+        {
+          path: "/verify-product",
+          element: <VerifyProduct />,
         },
         {
           path: "*",
