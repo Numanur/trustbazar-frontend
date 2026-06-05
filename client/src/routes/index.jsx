@@ -15,6 +15,7 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import BackendGuard from "../components/BackendGuard";
 
 const Index = () => {
   const Layout = () => {
@@ -49,7 +50,11 @@ const Index = () => {
         },
         {
           path: "/products",
-          element: <Products />,
+          element: (
+            <BackendGuard>
+              <Products />
+            </BackendGuard>
+          ),
         },
         {
           path: "/products/new",
@@ -65,11 +70,19 @@ const Index = () => {
         },
         {
           path: "/products-table",
-          element: <ProductTable />,
+          element: (
+            <BackendGuard>
+              <ProductTable />
+            </BackendGuard>
+          ),
         },
         {
           path: "/verify-product",
-          element: <VerifyProduct />,
+          element: (
+            <BackendGuard>
+              <VerifyProduct />
+            </BackendGuard>
+          ),
         },
         {
           path: "*",
