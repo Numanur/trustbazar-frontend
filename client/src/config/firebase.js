@@ -14,12 +14,12 @@ const FIREBASE_APP_ID = "1:378539980411:web:c6f7494f82828bbf63d4de";
 // };
 
 const firebaseConfig = {
-  apiKey: "AIzaSyCDl9RNxau1wf4BdTTmZrko41mcKX_inJY",
+  apiKey: FIREBASE_API_KEY,
   authDomain: "trustbazar.firebaseapp.com",
   projectId: "trustbazar",
   storageBucket: "trustbazar.firebasestorage.app",
   messagingSenderId: "95438939228",
-  appId: "1:95438939228:web:e1d5492cfda3035dbab299",
+  appId: FIREBASE_APP_ID
 };
 
 // Initialize Firebase
