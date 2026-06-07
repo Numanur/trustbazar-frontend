@@ -56,10 +56,11 @@ const Product = () => {
 
             <div className="">
               <button
-                className={`${product?.sellStatus == "available"
-                  ? "bg-emerald-100 text-emerald-600"
-                  : "bg-red-100 text-red-500 "
-                  }  px-3 py-1 rounded text-lg font-semibold capitalize flex items-center justify-center`}
+                className={`${
+                  product?.sellStatus == "available"
+                    ? "bg-emerald-100 text-emerald-600"
+                    : "bg-red-100 text-red-500 "
+                }  px-3 py-1 rounded text-lg font-semibold capitalize flex items-center justify-center`}
               >
                 <span>
                   {product?.sellStatus == "available" ? (
@@ -82,9 +83,7 @@ const Product = () => {
               Description
             </h1>
             <hr />
-            <div className="mt-3 w-1/2">
-              {product?.basicDetails?.description}
-            </div>
+            <div className="mt-3">{product?.basicDetails?.description}</div>
           </div>
 
           <div className="mb-5">
